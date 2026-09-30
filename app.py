@@ -255,7 +255,6 @@ elif page == "📋 Parsed Data":
         parsed_csv = pd.DataFrame(st.session_state.parsed).T.to_csv(index=True).encode("utf-8")
         st.download_button("Download Parsed Data CSV", parsed_csv, file_name="parsed_resumes.csv", mime="text/csv")
 
-```python
 elif page == "ℹ️ About":
     st.title("ℹ️ About ResumeIQ")
 
@@ -336,7 +335,6 @@ elif page == "ℹ️ About":
     techniques can be applied to resume parsing, skill extraction, and job matching
     in a practical web application.**
     """)
-```
 
 st.markdown("---")
 st.caption("ResumeIQ • Resume Parser & Job Matching System • Python + Streamlit + NLP")
