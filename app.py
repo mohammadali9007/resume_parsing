@@ -255,21 +255,88 @@ elif page == "📋 Parsed Data":
         parsed_csv = pd.DataFrame(st.session_state.parsed).T.to_csv(index=True).encode("utf-8")
         st.download_button("Download Parsed Data CSV", parsed_csv, file_name="parsed_resumes.csv", mime="text/csv")
 
+```python
 elif page == "ℹ️ About":
     st.title("ℹ️ About ResumeIQ")
+
     st.markdown("""
-    **ResumeIQ** is a resume parsing and job matching web application built with Python, Streamlit, and NLP techniques.
+    # 📄 ResumeIQ
 
-    **Features**
-    - Upload multiple PDF, DOCX, and TXT resumes
-    - Extract contact information and resume sections
-    - Detect predefined skills
-    - Compare resumes with a job description using TF-IDF and cosine similarity
-    - Calculate a combined match score (60% text similarity + 40% skill match)
-    - Compare candidates and export CSV/PDF reports
+    **ResumeIQ** is an NLP-based resume parsing and job matching web application
+    designed to analyze resumes and compare candidates with a given job description.
 
-    **Important:** This is a basic algorithmic matching tool, not an automatic hiring decision. Results should be reviewed by a human. Scanned image-only PDFs may require OCR.
+    The application uses **Python, Streamlit, and Natural Language Processing (NLP)**
+    techniques to extract useful information from resumes and calculate how closely
+    a candidate's profile matches a job description.
+
+    ### 👩‍💻 Project Creator
+
+    **Homaira Akter Oyshee**
+
+    This project was developed as an NLP-focused application to demonstrate the
+    practical use of text processing, information extraction, and similarity
+    analysis in resume screening.
+
+    ### 🚀 Key Features
+
+    - 📤 Upload multiple **PDF, DOCX, and TXT** resumes
+    - 📑 Extract resume text and important sections
+    - 👤 Extract basic contact information
+    - 🛠️ Detect predefined technical and professional skills
+    - 📋 Analyze multiple candidates at the same time
+    - 💼 Enter a **Job Description** for candidate matching
+    - 🔎 Compare resume content with the job description
+    - 🧠 Use **TF-IDF Vectorization** for text representation
+    - 📐 Use **Cosine Similarity** to measure text similarity
+    - 📊 Calculate a combined match score
+    - ⚖️ Match Score = **60% Text Similarity + 40% Skill Match**
+    - 🏆 Compare candidates based on matching results
+    - 📥 Export analysis results as **CSV and PDF reports**
+
+    ### 🧠 NLP Techniques Used
+
+    ResumeIQ applies several basic NLP and machine-learning techniques, including:
+
+    - Text preprocessing
+    - Lowercasing and text cleaning
+    - Regular expressions (Regex)
+    - Keyword and skill detection
+    - TF-IDF (Term Frequency–Inverse Document Frequency)
+    - Cosine similarity
+    - Text-based matching
+
+    ### ⚙️ Technologies Used
+
+    **Programming Language:** Python
+
+    **Framework:** Streamlit
+
+    **NLP / Machine Learning:** Scikit-learn, TF-IDF, Cosine Similarity
+
+    **Data Processing:** Pandas
+
+    **Document Processing:** PyPDF, python-docx
+
+    **Report Generation:** ReportLab
+
+    ### ⚠️ Important Note
+
+    ResumeIQ is a **basic algorithmic resume matching and analysis tool**.
+    It is not intended to make automatic hiring decisions.
+
+    The generated match scores should be considered as supportive information,
+    and final candidate evaluation should always involve human review.
+
+    Scanned or image-only PDF resumes may require **OCR (Optical Character Recognition)**
+    before their text can be analyzed properly.
+
+    ### 🎯 Purpose
+
+    The main purpose of ResumeIQ is to demonstrate how **NLP and machine-learning
+    techniques can be applied to resume parsing, skill extraction, and job matching
+    in a practical web application.**
     """)
+```
 
 st.markdown("---")
 st.caption("ResumeIQ • Resume Parser & Job Matching System • Python + Streamlit + NLP")
